@@ -1,0 +1,22 @@
+.audio-ls{
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background: #000;
+}
+
+.audio-ls-item .audio-img{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: grey;
+}
+.audio-info{
+    font-size: 12px;
+}
+
+.audio-info p:last-child{
+    color: grey;
+}

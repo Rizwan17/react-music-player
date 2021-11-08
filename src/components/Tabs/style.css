@@ -1,0 +1,29 @@
+.tab-header > a{
+    flex: 1;
+    display: inline-block;
+    padding: 10px 0;
+    text-align: center;
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+    border-bottom: 1px solid grey;
+}
+
+.tab-header > a.active{
+    border-bottom: 1px solid #83c11f;
+}
+
+.tab-contents .tab-content{
+    display: none;
+}
+
+.tab-contents .tab-content:target{
+    display: block;
+}
+
+.tab-contents .tab-content .content-item{
+    width: 120px;
+    height: 120px;
+    background: grey;
+    border-radius: 50%;
+}

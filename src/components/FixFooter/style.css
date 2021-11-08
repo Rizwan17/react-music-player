@@ -1,0 +1,133 @@
+.fix-footer{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 10px 20px;
+    background: grey;
+    background: url(./../../assets/footer-bg-1.jpg);
+    background-size: cover;
+    background-position: center;
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+    /* height: 50px; */
+    transition: height .2s ease-out;
+}
+
+.fix-footer.active{
+    height: calc(100% - 40px);
+}
+.slide-up-btn{
+    width: 50px;
+    height: 5px;
+    background: grey;
+    border-radius: 10px;
+    margin: 0 auto;
+}
+
+
+.navigation-menu{
+    width: 160px;
+    background: #000;
+    border-radius: 5px;
+    margin: 5px auto;
+    text-align: center;
+    padding: 5px 0;
+}
+
+.navigation-menu a{
+    font-size: 12px;
+}
+.navigation-menu img{
+    width: 15px
+}
+
+.mini-player .artist-cover-img{
+    width: 40px;
+    height: 40px;
+    background: grey;
+    border-radius: 50%; 
+}
+
+.mini-player-control button{
+    border: none;
+    outline: none;
+    background: transparent;
+}
+
+.mini-player button img{
+    width: 15px;
+}
+
+.mini-player button:first-child{
+    margin-right: 20px;
+}
+
+.mini-player-info{
+    font-size: 12px;
+}
+
+.mini-player-info p:last-child{
+    color: grey;
+}
+
+.audio-player-lg .audio-cover-lg-img{
+    width: 300px;
+    height: 300px;
+    position: relative;
+    margin: 20px auto;
+}
+
+.audio-player-lg .audio-cover-lg-img img{
+    width: 280px;
+    height: 280px;
+    border-radius: 50%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background: grey;
+}
+
+.audio-player-progress{
+    width: 100%;
+    margin: 20px 0;
+}
+
+.audio-player-progress input[type=range]{
+    width: 100%;
+    -webkit-appearance: none;
+    height: 2px;
+    border-radius: 2px;
+    background: linear-gradient(to right, #ffffff 50%, grey 50%);
+}
+
+.audio-controls{
+    width: 180px;
+    margin: 0 auto;
+}
+
+.audio-controls button{
+    border: none;
+    outline: none;
+    background: transparent;
+}
+
+.audio-controls > button:first-child{
+    transform: scaleX(-1);
+}
+
+.audio-controls .play-pause-btn{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #fff;
+}
+.audio-controls .play-pause-btn img{
+    width: 15px;
+    margin-left: 5px;
+    margin-top: 5px;
+}
