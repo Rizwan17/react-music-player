@@ -26,4 +26,22 @@
     height: 120px;
     background: grey;
     border-radius: 50%;
+    overflow: hidden;
+    position: relative;
+}
+
+.content-wrapper{
+    flex-wrap: wrap;
+}
+
+.content-wrapper .content-item img{
+    width: 120px;
+    height: 120px;
+}
+.content-label{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    font-size: 15px;
 }

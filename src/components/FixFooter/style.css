@@ -14,6 +14,14 @@
     transition: height .2s ease-out;
 }
 
+.fix-footer._h83{
+    height: 83px;
+}
+
+.fix-footer._h138{
+    height: 138px;
+}
+
 .fix-footer.active{
     height: calc(100% - 40px);
 }
@@ -47,6 +55,12 @@
     height: 40px;
     background: grey;
     border-radius: 50%; 
+    overflow: hidden;
+}
+
+.mini-player .artist-cover-img img{
+    width: 40px;
+    height: 40px;
 }
 
 .mini-player-control button{
@@ -76,6 +90,7 @@
     height: 300px;
     position: relative;
     margin: 20px auto;
+    overflow: hidden;
 }
 
 .audio-player-lg .audio-cover-lg-img img{
@@ -128,6 +143,4 @@
 }
 .audio-controls .play-pause-btn img{
     width: 15px;
-    margin-left: 5px;
-    margin-top: 5px;
 }
