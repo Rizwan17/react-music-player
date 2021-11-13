@@ -46,7 +46,7 @@ const Tabs = ({ tabData, onItemSelect }) => {
               className={`tab-content ${getActiveClass(tab)}`}
               id={`${tab}`}
             >
-              <div className="content-wrapper flex justify-sb m-20">
+              <div className="content-wrapper flex justify-center m-20">
                 {tabData[tab].items.map((item, _index) => (
                   <div
                     onClick={() => onItemSelect(tab, item.key)}

@@ -65,16 +65,20 @@ const FixFooter = ({ trackIndex, audioList }) => {
   }, [trackIndex]);
 
   useEffect(() => {
-    // if a music is already playing then we will stop it and assign currently selected one
-    audioRef.current.pause();
-    // new audio initialize
-    audioRef.current = new Audio(audioSrc);
-    //playing initialize audio
-    audioRef.current.play();
-    // set isPlaying true when music started playing
-    setIsPlaying(true);
-    // start progress of the audio
-    startTimer();
+
+    if(currentTrackIndex !== -1){
+       // if a music is already playing then we will stop it and assign currently selected one
+      audioRef.current.pause();
+      // new audio initialize
+      audioRef.current = new Audio(audioSrc);
+      //playing initialize audio
+      audioRef.current.play();
+      // set isPlaying true when music started playing
+      setIsPlaying(true);
+      // start progress of the audio
+      startTimer();
+    }
+   
 
     //setCurrentTrackIndex(trackIndex);
   }, [currentTrackIndex]);
