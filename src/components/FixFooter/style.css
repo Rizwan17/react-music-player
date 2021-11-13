@@ -14,6 +14,14 @@
     transition: height .2s ease-out;
 }
 
+.fix-footer._h60{
+    height: 60px;
+}
+
+.fix-footer._h115{
+    height: 115px;
+}
+
 .fix-footer._h83{
     height: 83px;
 }

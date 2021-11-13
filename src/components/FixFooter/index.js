@@ -44,6 +44,7 @@ const FixFooter = ({ trackIndex, audioList }) => {
   const nextTrack = () => {
     if(currentTrackIndex < audioList.length - 1){
       setCurrentTrackIndex(prevIndex => prevIndex + 1);
+      setTrackProgress(0);
     }else{
       setCurrentTrackIndex(0);
     }
@@ -94,8 +95,12 @@ const FixFooter = ({ trackIndex, audioList }) => {
   console.log({ trackProgress });
 
   return (
-    <div className={`fix-footer ${slideUp ? "active" : ""}`}>
-      <div onClick={() => setSlideUp(!slideUp)} className="slide-up-btn"></div>
+    <div className={`fix-footer ${currentTrackIndex !== -1 ? '_h115' : '_h60 '} ${slideUp ? "active" : ""}`}>
+      <div onClick={() => {
+        if(currentTrackIndex !== -1){
+          setSlideUp(!slideUp)
+        }
+      }} className="slide-up-btn"></div>
 
       <div className="d-visilibity"></div>
 

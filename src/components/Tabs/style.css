@@ -15,9 +15,14 @@
 
 .tab-contents .tab-content{
     display: none;
+    margin-bottom: 100px;
 }
 
-.tab-contents .tab-content:target{
+/* .tab-contents .tab-content:target{
+    display: block;
+} */
+
+.tab-contents .tab-content.active{
     display: block;
 }
 
