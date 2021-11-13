@@ -42,26 +42,25 @@ const FixFooter = ({ trackIndex, audioList }) => {
   };
 
   const nextTrack = () => {
-    if(currentTrackIndex < audioList.length - 1){
-      setCurrentTrackIndex(prevIndex => prevIndex + 1);
+    if (currentTrackIndex < audioList.length - 1) {
+      setCurrentTrackIndex((prevIndex) => prevIndex + 1);
       setTrackProgress(0);
-    }else{
+    } else {
       setCurrentTrackIndex(0);
     }
-    
-  }
+  };
 
   const prevTrack = () => {
-    if(currentTrackIndex){
-      setCurrentTrackIndex(prevIndex => prevIndex - 1);
-    }else{  
+    if (currentTrackIndex) {
+      setCurrentTrackIndex((prevIndex) => prevIndex - 1);
+    } else {
       setCurrentTrackIndex(audioList.length - 1);
     }
-  }
+  };
 
   useEffect(() => {
-    console.log({audioFile});
-    clearInterval(intervalRef.current)
+    console.log({ audioFile });
+    clearInterval(intervalRef.current);
     setCurrentTrackIndex(trackIndex);
   }, [trackIndex]);
 
@@ -95,12 +94,19 @@ const FixFooter = ({ trackIndex, audioList }) => {
   console.log({ trackProgress });
 
   return (
-    <div className={`fix-footer ${currentTrackIndex !== -1 ? '_h115' : '_h60 '} ${slideUp ? "active" : ""}`}>
-      <div onClick={() => {
-        if(currentTrackIndex !== -1){
-          setSlideUp(!slideUp)
-        }
-      }} className="slide-up-btn"></div>
+    <div
+      className={`fix-footer ${currentTrackIndex !== -1 ? "_h115" : "_h60 "} ${
+        slideUp ? "active" : ""
+      }`}
+    >
+      <div
+        onClick={() => {
+          if (currentTrackIndex !== -1) {
+            setSlideUp(!slideUp);
+          }
+        }}
+        className="slide-up-btn"
+      ></div>
 
       <div className="d-visilibity"></div>
 

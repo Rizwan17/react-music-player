@@ -16,7 +16,7 @@ const AudioPlayer = ({
   onPlayPause,
   isPlaying,
   nextTrack,
-  prevTrack
+  prevTrack,
 }) => {
   const currentProgress = (trackProgress / duration) * 100;
   const trackProgressStyling = `linear-gradient(to right, #ffffff ${currentProgress}%, grey ${currentProgress}%)`;
@@ -51,9 +51,12 @@ const AudioPlayer = ({
         <div className="play-pause-btn">
           <button onClick={onPlayPause}>
             {isPlaying ? (
-                <img style={{ marginTop: "5px" }} src={pauseBlackIcon} />
+              <img style={{ marginTop: "5px" }} src={pauseBlackIcon} />
             ) : (
-                <img style={{ marginLeft: "5px", marginTop: '5px' }} src={playBlackIcon} />
+              <img
+                style={{ marginLeft: "5px", marginTop: "5px" }}
+                src={playBlackIcon}
+              />
             )}
           </button>
         </div>
